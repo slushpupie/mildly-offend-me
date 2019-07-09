@@ -51,7 +51,7 @@ $ fortune mildly-offend-me|cowsay -f stegosaurus
 
 you can then shuffle your cows:
 
-`fortune mildly-offend-me|cowsay -f $(ls /usr/local/Cellar/cowsay/3.03/share/cows/*.cow | gshuf -n1)`
+`fortune mildly-offend-me|cowsay -f $(ls /usr/local/Cellar/cowsay/*/share/cows/*.cow | gshuf -n1)`
 
 # colorize all the things!
 for extra extra credit, pipe your fortune through lolcat! to rainbow-ify the text.
