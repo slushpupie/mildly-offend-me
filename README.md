@@ -12,8 +12,8 @@ Assuming you've cloned this to your home dir, simply:
 `fortune -f`
 In my case (mac with fortune installed with homebrew)
 
-         ln -s mildly-offend-me/mildly-offend-me /usr/local/Cellar/fortune/9708/share/games/fortunes/mildly-offend-me
-         ln -s mildly-offend-me/mildly-offend-me.dat /usr/local/Cellar/fortune/9708/share/games/fortunes/mildly-offend-me.dat
+         ln -s mildly-offend-me/mildly-offend-me $HOMEBREW_CELLAR/fortune/9708/share/games/fortunes/mildly-offend-me
+         ln -s mildly-offend-me/mildly-offend-me.dat $HOMEBREW_CELLAR/fortune/9708/share/games/fortunes/mildly-offend-me.dat
 3. You'll need to rebuild the binary file every time you fetch new changes.
 4. You can test your fortune by typing `fortune mildly-offend-me`
 
@@ -51,7 +51,7 @@ $ fortune mildly-offend-me|cowsay -f stegosaurus
 
 you can then shuffle your cows:
 
-`fortune mildly-offend-me|cowsay -f $(ls /usr/local/Cellar/cowsay/*/share/cows/*.cow | gshuf -n1)`
+`fortune mildly-offend-me|cowsay -f $(ls $HOMEBREW_CELLAR/cowsay/*/share/cows/*.cow | gshuf -n1)`
 
 # colorize all the things!
 for extra extra credit, pipe your fortune through lolcat! to rainbow-ify the text.
@@ -59,7 +59,7 @@ for extra extra credit, pipe your fortune through lolcat! to rainbow-ify the tex
 `gem install lolcat`
 
 
-`fortune mildly-offend-me|cowsay -f $(ls /usr/local/Cellar/cowsay/3.03/share/cows/*.cow | gshuf -n1) | lolcat`
+`fortune mildly-offend-me|cowsay -f $(ls $HOMEBREW_CELLAR/cowsay/3.03/share/cows/*.cow | gshuf -n1) | lolcat`
 
 # Credits
 
